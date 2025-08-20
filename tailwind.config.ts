@@ -10,9 +10,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Inter', 'sans-serif'],
-        headline: ['Inter', 'sans-serif'],
-        code: ['monospace'],
+        body: ['Crimson Pro', 'serif'],
+        headline: ['Playfair Display', 'serif'],
+        signature: ['Great Vibes', 'cursive'],
       },
       colors: {
         background: 'hsl(var(--background))',
