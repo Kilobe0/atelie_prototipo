@@ -3,7 +3,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'Ateliê da Bia',
+  title: 'Chlorine Ateliê',
   description: 'Arte em Biscuit, com Alma e Afeto.',
 };
 
