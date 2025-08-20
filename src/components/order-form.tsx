@@ -6,8 +6,8 @@ import { z } from "zod";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
 import { Calendar as CalendarIcon } from "lucide-react";
-import { useFormState, useFormStatus } from "react-dom";
-import { useEffect } from "react";
+import { useFormStatus } from "react-dom";
+import { useEffect, useActionState } from "react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -56,7 +56,7 @@ function SubmitButton() {
 
 export function OrderForm() {
   const { toast } = useToast();
-  const [state, formAction] = useFormState(submitOrder, initialState);
+  const [state, formAction] = useActionState(submitOrder, initialState);
 
   const form = useForm<OrderFormValues>({
     resolver: zodResolver(orderFormSchema),
