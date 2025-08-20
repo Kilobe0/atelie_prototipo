@@ -14,23 +14,32 @@ export function About() {
         >
           <div className="w-full lg:w-1/2">
             <h2 className="text-4xl md:text-5xl font-headline text-foreground mb-6">
-              Sobre a Artesã
+              Quem faz as encomendas
             </h2>
             <p className="text-lg text-foreground/80 mb-4">
-              Olá! Eu sou a Bia, a alma por trás do ateliê. Desde criança, minhas mãos encontram alegria em dar forma à imaginação. O biscuit se tornou minha grande paixão, um universo de possibilidades onde cada peça é uma história contada com afeto.
+              Me chame de Chlorine, nasci em 2005 e desde criança estudo por conta própria modelagem e ilustração, comecei fazendo miniaturas para bonecas, objetos decorativos e acessórios para uso pessoal.
+            </p>
+            <p className="text-lg text-foreground/80 mb-4">
+              Em 2023 participei de feiras de artesanato em minha cidade natal, Sete Lagoas; na época eu fazia peças decorativas e acessórios, tudo na temática tons pastéis. Tentei ter uma loja online mas a experiência não me agradou, decidi então fechar a loja e agora faço tudo com a proposta de um ateliê.
+            </p>
+            <h3 className="text-3xl font-headline text-foreground mt-8 mb-4">
+              Proposta do Ateliê
+            </h3>
+            <p className="text-lg text-foreground/80 mb-4">
+              Este é o meu ateliê, que diferente de uma loja online, cada encomenda que recebo se torna um projeto onde realizo pesquisas, testes, protótipos e modelos até chegar em um resultado final.
             </p>
             <p className="text-lg text-foreground/80 mb-8">
-              Meu trabalho é um convite para você sonhar. Cada encomenda é tratada como única, com dedicação total para que o resultado final seja não apenas uma peça de biscuit, mas um pedacinho de felicidade materializada.
+              Atualmente eu trabalho em um emprego CLT e tenho pouco tempo livre para me dedicar à arte. Toda grana que recebo das encomendas é investida em upgrades de materiais para fazer novos projetos e expandir o ateliê, assim pretendo sempre ter um acervo melhor de peças.
             </p>
             <p className="font-signature text-5xl text-accent">
-              Bia
+              Chlorine
             </p>
           </div>
           <div className="w-full lg:w-1/2 flex justify-center">
             <div className="relative w-80 h-96 lg:w-96 lg:h-[30rem] rounded-lg overflow-hidden shadow-2xl shadow-primary/10">
               <Image
                 src="https://placehold.co/600x800.png"
-                alt="Foto da Bia, a artesã"
+                alt="Foto da Chlorine, a artesã"
                 fill
                 className="object-cover"
                 data-ai-hint="artisan portrait"
