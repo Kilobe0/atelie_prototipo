@@ -12,7 +12,7 @@ export function Hero() {
           transition={{ duration: 0.8 }}
         >
           <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl text-foreground">
-            Arte em Biscuit, com Alma e Afeto.
+            Bebendo cloro e fazendo arte.
           </h1>
         </MotionDiv>
         <MotionDiv
