@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Topos de Bolo",
+    "description": "Topos de bolo personalizados para todas as ocasiões.",
+    "price": 95.50,
+    "image": "https://placehold.co/600x800.png"
+  },
+  {
+    "id": 2,
+    "name": "Lembrancinhas",
+    "description": "Lembrancinhas únicas e feitas à mão para seus eventos.",
+    "price": 15.00,
+    "image": "https://placehold.co/600x800.png"
+  },
+  {
+    "id": 3,
+    "name": "Personalizados",
+    "description": "Peças exclusivas criadas a partir da sua imaginação.",
+    "price": 180.00,
+    "image": "https://placehold.co/600x800.png"
+  },
+  {
+    "id": 4,
+    "name": "Velas Decoradas",
+    "description": "Velas temáticas e decoradas que encantam a festa.",
+    "price": 70.00,
+    "image": "https://placehold.co/600x800.png"
+  },
+  {
+    "id": 5,
+    "name": "Action Figures",
+    "description": "Seus personagens favoritos em formato de action figure.",
+    "price": 250.00,
+    "image": "https://placehold.co/600x800.png"
+  },
+  {
+    "id": 6,
+    "name": "Personagens",
+    "description": "Esculturas detalhadas de personagens icônicos.",
+    "price": 220.00,
+    "image": "https://placehold.co/600x800.png"
+  }
+]
