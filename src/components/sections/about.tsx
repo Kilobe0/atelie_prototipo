@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { MotionDiv } from "@/components/motion-div";
+import Image from "next/image";
 
 export function About() {
   return (
@@ -31,7 +31,7 @@ export function About() {
             <p className="text-lg text-foreground/80 mb-8">
               Atualmente eu trabalho em um emprego CLT e tenho pouco tempo livre para me dedicar à arte. Toda grana que recebo das encomendas é investida em upgrades de materiais para fazer novos projetos e expandir o ateliê, assim pretendo sempre ter um acervo melhor de peças.
             </p>
-            <p className="font-signature text-5xl text-accent">
+            <p className="font-cursive text-5xl text-accent">
               Chlorine
             </p>
           </div>

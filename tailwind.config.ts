@@ -1,4 +1,4 @@
-import type {Config} from 'tailwindcss';
+import type { Config } from 'tailwindcss';
 
 export default {
   darkMode: ['class'],
@@ -13,6 +13,8 @@ export default {
         body: ['Crimson Pro', 'serif'],
         headline: ['Playfair Display', 'serif'],
         signature: ['Great Vibes', 'cursive'],
+        cursive: ["var(--font-cursive)"],
+        serifada: ["var(--font-serif)"],
       },
       colors: {
         background: 'hsl(var(--background))',

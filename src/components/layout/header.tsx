@@ -11,7 +11,7 @@ export function Header() {
   return (
     <header className="py-6 px-4 md:px-8 w-full bg-background/80 backdrop-blur-sm z-20 sticky top-0">
       <div className="container mx-auto flex justify-between items-center">
-        <Link href="/" className="text-3xl font-signature text-foreground hover:text-accent transition-colors">
+        <Link href="/" className="text-5xl font-cursive text-foreground hover:text-accent transition-colors">
           Chlorine Ateliê
         </Link>
         <nav className="hidden md:flex items-center space-x-6">
