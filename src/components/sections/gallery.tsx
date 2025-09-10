@@ -29,9 +29,9 @@ export function Gallery() {
                       <h3 className="text-xl font-headline text-primary">{product.name}</h3>
                       <p className="text-sm text-foreground/80 mt-1">{product.description}</p>
                     </div>
-                    {/* <p className="text--lg font-semibold text-foreground mt--2 self-end">
+                    <p className="text--lg font-semibold text-foreground mt--2 self-end">
                       R$ {product.price.toFixed(2).replace('.', ',')}
-                    </p> */}
+                    </p>
                   </div>
                 </CardContent>
               </Card>
