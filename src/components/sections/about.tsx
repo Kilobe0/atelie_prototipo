@@ -38,8 +38,8 @@ export function About() {
           <div className="w-full lg:w-1/2 flex justify-center">
             <div className="relative w-80 h-96 lg:w-96 lg:h-[30rem] rounded-lg overflow-hidden shadow-2xl shadow-primary/10">
               <Image
-                src="https://placehold.co/600x800.png"
-                alt="Foto da Chlorine, a artesã"
+                src="/images/encomendas.jpg"
+                alt="Foto das encomendas sendo preparadas."
                 fill
                 className="object-cover"
                 data-ai-hint="artisan portrait"

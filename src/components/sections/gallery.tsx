@@ -26,7 +26,7 @@ export function Gallery() {
                   <ProductCarousel images={product.images} alt={product.name} />
                   <div className="p-4 flex flex-col justify-between h-40">
                     <div>
-                      <h3 className="text-xl font-headline text-accent">{product.name}</h3>
+                      <h3 className="text-xl font-headline text-primary">{product.name}</h3>
                       <p className="text-sm text-foreground/80 mt-1">{product.description}</p>
                     </div>
                     {/* <p className="text--lg font-semibold text-foreground mt--2 self-end">
