@@ -10,9 +10,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Crimson Pro', 'serif'],
-        headline: ['Playfair Display', 'serif'],
-        signature: ['Great Vibes', 'cursive'],
+        body: ["var(--font-body)"],
+        display: ["var(--font-display)"],
         cursive: ["var(--font-cursive)"],
         serifada: ["var(--font-serif)"],
       },

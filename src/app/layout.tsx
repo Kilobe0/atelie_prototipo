@@ -1,29 +1,34 @@
 import { Toaster } from "@/components/ui/toaster";
 import type { Metadata } from 'next';
+
+// 1. Importe as fontes do Google diretamente
+import { Crimson_Pro, Great_Vibes } from 'next/font/google';
 import localFont from 'next/font/local';
 import './globals.css';
 
+// 2. Configure as fontes do Google (elas se tornam variáveis CSS)
+const crimsonPro = Crimson_Pro({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-body', // Fonte principal do corpo do texto
+});
+
+const greatVibes = Great_Vibes({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-display', // Fonte para títulos grandes e de destaque
+});
+
+// 3. Configure suas fontes locais (já estava quase perfeito)
 const fonteCursiva = localFont({
-  src: [
-    {
-      path: './fonts/Sloop-ScriptThree.ttf',
-      weight: '400',
-      style: 'normal',
-    }
-  ],
-  variable: '--font-cursive',
-})
+  src: '../assets/fonts/Sloop-ScriptThree.ttf',
+  variable: '--font-cursive', // Fonte para detalhes e assinaturas
+});
 
 const fonteSerifada = localFont({
-  src: [
-    {
-      path: './fonts/TYPEWR__.ttf',
-      weight: '400',
-      style: 'normal',
-    }
-  ],
-  variable: '--font-serif',
-})
+  src: '../assets/fonts/TypewriterPress-Regular.ttf', // Usando a nova fonte
+  variable: '--font-serif', // Fonte para títulos (headline)
+});
 
 export const metadata: Metadata = {
   title: 'Chlorine Ateliê',
@@ -34,29 +39,13 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="pt-BR">
-      <head>
-        {/* mantém os links do Google por enquanto */}
-        <link
-          rel="preconnect"
-          href="https://fonts.googleapis.com"
-        />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700&family=Great+Vibes&family=Playfair+Display:wght@700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body
-        className={`${fonteCursiva.variable} ${fonteSerifada.variable} font-body antialiased`}
-      >
+    // 4. Remova o <head> manual. O Next.js cuida disso.
+    // 5. Junte TODAS as variáveis de fonte no className.
+    <html lang="pt-BR" className={`${crimsonPro.variable} ${greatVibes.variable} ${fonteCursiva.variable} ${fonteSerifada.variable}`}>
+      <body className="font-body antialiased"> {/* font-body será a padrão */}
         {children}
         <Toaster />
       </body>
     </html>
-  )
+  );
 }
