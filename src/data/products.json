@@ -1,44 +1,73 @@
 [
   {
     "id": 1,
-    "name": "Topos de Bolo",
-    "description": "Topos de bolo personalizados para todas as ocasiões.",
+    "name": "Esqueiro",
+    "description": "Esqueiro artesanal personalizado.",
     "price": 95.50,
-    "image": "https://placehold.co/600x800.png"
+    "images": [
+      "/images/esqueiros/esqueiro1.jpg",
+      "/images/esqueiros/esqueiro2.jpg",
+      "/images/esqueiros/esqueiro3.jpg",
+      "/images/esqueiros/esqueiro4.jpg",
+      "/images/esqueiros/esqueiro5.jpg"
+    ]
   },
   {
     "id": 2,
-    "name": "Lembrancinhas",
-    "description": "Lembrancinhas únicas e feitas à mão para seus eventos.",
+    "name": "Cinzeiro gatinho",
+    "description": "Cinzeiro de gatinho.",
     "price": 15.00,
-    "image": "https://placehold.co/600x800.png"
+    "images": [
+      "/images/cinzeiros/gatinhos/gatinhos1.jpg",
+      "/images/cinzeiros/gatinhos/gatinhos2.jpg"
+    ]
   },
   {
     "id": 3,
-    "name": "Personalizados",
-    "description": "Peças exclusivas criadas a partir da sua imaginação.",
+    "name": "Lagoa de Vitória Régias",
+    "description": "Confeccionada na argila. Modelagem, pintura e acabamentos feitos a mão. Revestida em resina pra maior duração e efeito lindo de água de lagoa.",
     "price": 180.00,
-    "image": "https://placehold.co/600x800.png"
+    "images": [
+      "/images/cinzeiros/lagoa/lago1.jpg",
+      "/images/cinzeiros/lagoa/lago2.jpg",
+      "/images/cinzeiros/lagoa/lago3.jpg",
+      "/images/cinzeiros/lagoa/lago4.jpg",
+      "/images/cinzeiros/lagoa/lago5.jpg"
+    ]
   },
   {
     "id": 4,
-    "name": "Velas Decoradas",
-    "description": "Velas temáticas e decoradas que encantam a festa.",
+    "name": "Colar Orquídeas",
+    "description": "Peça delicada modelada no biscuit. Pintura feita a mão e acabamento em verniz fosco. Colar 70cm comprimento.",
     "price": 70.00,
-    "image": "https://placehold.co/600x800.png"
+    "images": [
+      "/images/colar/colar1.jpg",
+      "/images/colar/colar2.jpg",
+      "/images/colar/colar3.jpg"
+  ]
   },
   {
     "id": 5,
-    "name": "Action Figures",
-    "description": "Seus personagens favoritos em formato de action figure.",
+    "name": "Cinzeiro Balloonerism Mac Miller",
+    "description": "Peça confeccionada na cerâmica fria, modelada a mão. Pintura com tinta pva e acabamento em verniz fosco.",
     "price": 250.00,
-    "image": "https://placehold.co/600x800.png"
+    "images": [
+      "/images/cinzeiros/mac/mac1.jpg",
+      "/images/cinzeiros/mac/mac2.jpg",
+      "/images/cinzeiros/mac/mac3.jpg",
+      "/images/cinzeiros/mac/mac4.jpg"
+    ]
   },
   {
     "id": 6,
-    "name": "Personagens",
-    "description": "Esculturas detalhadas de personagens icônicos.",
+    "name": "Cinzeiro e porta incensos Vitória Régia",
+    "description": "Modelada a mão na cerâmica fria, pintura em tinta pva. Peça revestida em resina para dar melhor acabamento, proteção e efeito lindo de água caindo sob a planta.",
     "price": 220.00,
-    "image": "https://placehold.co/600x800.png"
+    "images": [
+      "/images/cinzeiros/vitoria/vitoria1.jpg",
+      "/images/cinzeiros/vitoria/vitoria2.jpg",
+      "/images/cinzeiros/vitoria/vitoria3.jpg",
+      "/images/cinzeiros/vitoria/vitoria4.jpg"
+    ]
   }
 ]

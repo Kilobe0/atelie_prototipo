@@ -1,7 +1,9 @@
-import { MotionDiv } from "@/components/motion-div";
 import { Card, CardContent } from "@/components/ui/card";
+import { MotionDiv } from "@/components/motion-div";
+
+import {ProductCarousel} from "@/components/ui/product-carousel";
+
 import products from "@/data/products.json";
-import Image from "next/image";
 
 export function Gallery() {
   return (
@@ -21,17 +23,15 @@ export function Gallery() {
             >
               <Card className="overflow-hidden border-accent/20 bg-muted/20 group transition-all duration-300 hover:shadow-2xl hover:shadow-accent/10 hover:border-accent/50">
                 <CardContent className="p-0">
-                  <div className="relative aspect-[3/4] w-full">
-                    <Image
-                      src={product.image}
-                      alt={product.name}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="p-4">
+                  <ProductCarousel images={product.images} alt={product.name} />
+                  <div className="p-4 flex flex-col justify-between h-40">
+                    <div>
                       <h3 className="text-xl font-headline text-accent">{product.name}</h3>
                       <p className="text-sm text-foreground/80 mt-1">{product.description}</p>
+                    </div>
+                    {/* <p className="text--lg font-semibold text-foreground mt--2 self-end">
+                      R$ {product.price.toFixed(2).replace('.', ',')}
+                    </p> */}
                   </div>
                 </CardContent>
               </Card>
