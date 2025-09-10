@@ -4,8 +4,8 @@ import Link from "next/link";
 import { MotionDiv } from "@/components/motion-div";
 
 export function Contact() {
-  const whatsappNumber = "5511999999999"; // Placeholder number
-  const emailAddress = "contato@ateliedabia.com"; // Placeholder email
+  const whatsappNumber = "5531997271587"; // Placeholder number
+  const emailAddress = "studiochlorine@gmail.com"; // Placeholder email
 
   return (
     <section id="contato" className="py-20 px-4 bg-background">
