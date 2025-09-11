@@ -23,13 +23,13 @@ export function Contact() {
             Tem alguma dúvida ou uma ideia especial? Me mande uma mensagem!
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <Button asChild variant="outline" size="lg" className="text-base border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-colors w-full sm:w-auto">
+            <Button asChild variant="outline" size="lg" className="text-base border-secondary text-secondary-foreground hover:bg-secondary/20 transition-colors w-full sm:w-auto">
               <Link href={`https://wa.me/${whatsappNumber}`} target="_blank" rel="noopener noreferrer">
                 <MessageSquare className="mr-2 h-5 w-5" />
                 WhatsApp
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="text-base border-secondary text-secondary-foreground hover:bg-secondary/20 transition-colors w-full sm:w-auto">
+            <Button asChild variant="outline" size="lg" className="text-base border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-colors w-full sm:w-auto">
                <Link href={`mailto:${emailAddress}`}>
                  <Mail className="mr-2 h-5 w-5" />
                  E-mail

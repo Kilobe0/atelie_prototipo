@@ -30,7 +30,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mt-10"
         >
-          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-xl">
+          <Button asChild size="lg" className="bg-primary hover:bg-primary/60 text-primary-foreground text-xl">
             <Link href="#encomenda">
               Quero uma peça exclusiva
             </Link>

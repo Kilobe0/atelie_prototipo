@@ -32,10 +32,15 @@ import { submitOrder } from "@/app/encomenda/actions";
 import { Card, CardContent } from "./ui/card";
 
 const orderFormSchema = z.object({
-  name: z.string().min(2, { message: "O nome deve ter pelo menos 2 caracteres." }),
+  name: z
+    .string()
+    .min(2, { message: "O nome deve ter pelo menos 2 caracteres." }),
   email: z.string().email({ message: "Por favor, insira um e-mail válido." }),
   desiredDate: z.date({ required_error: "A data desejada é obrigatória." }),
-  description: z.string().min(10, { message: "A descrição deve ter pelo menos 10 caracteres." }).max(500, { message: "A descrição não pode exceder 500 caracteres." }),
+  description: z
+    .string()
+    .min(10, { message: "A descrição deve ter pelo menos 10 caracteres." })
+    .max(500, { message: "A descrição não pode exceder 500 caracteres." }),
 });
 
 type OrderFormValues = z.infer<typeof orderFormSchema>;
@@ -48,7 +53,11 @@ const initialState = {
 function SubmitButton() {
   const { pending } = useFormStatus();
   return (
-    <Button type="submit" disabled={pending} className="w-full bg-primary hover:bg-primary/90 text-primary-foreground text-lg py-6">
+    <Button
+      type="submit"
+      disabled={pending}
+      className="w-fit bg-primary hover:bg-primary/90 text-primary-foreground text-lg py-6"
+    >
       {pending ? "Enviando..." : "Solicitar Orçamento"}
     </Button>
   );
@@ -80,7 +89,7 @@ export function OrderForm() {
           title: "Sucesso!",
           description: state.message,
           variant: "default",
-          className: "bg-secondary text-secondary-foreground"
+          className: "bg-secondary text-secondary-foreground",
         });
         form.reset();
       }
@@ -149,7 +158,8 @@ export function OrderForm() {
                         selected={field.value}
                         onSelect={field.onChange}
                         disabled={(date) =>
-                          date < new Date(new Date().setDate(new Date().getDate() - 1))
+                          date <
+                          new Date(new Date().setDate(new Date().getDate() - 1))
                         }
                         initialFocus
                         locale={ptBR}
@@ -177,7 +187,9 @@ export function OrderForm() {
                 </FormItem>
               )}
             />
-            <SubmitButton />
+            <div className="flex justify-center">
+              <SubmitButton />
+            </div>
           </form>
         </Form>
       </CardContent>

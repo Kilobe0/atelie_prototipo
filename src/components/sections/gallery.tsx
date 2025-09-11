@@ -37,7 +37,7 @@ export function Gallery() {
                   {/* Detalhes do Produto */}
                   <div className="p-4 flex flex-col justify-between flex-grow">
                     <div>
-                      <h3 className="text-3xl font-headline text-accent">
+                      <h3 className="text-3xl font-headline text-accent font-bold">
                         {product.name}
                       </h3>
                       <p className="text-foreground/80 mt-1">
