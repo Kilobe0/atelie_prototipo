@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "name": "Porta-Esqueiro",
-    "description": "Porta-Esqueiro artesanal personalizado.",
+    "name": "Sem Título",
+    "description": "Sem descrição.",
     "price": 95.5,
     "images": [
       "/images/esqueiros/esqueiro1.jpg",
@@ -10,17 +10,19 @@
       "/images/esqueiros/esqueiro3.jpg",
       "/images/esqueiros/esqueiro4.jpg",
       "/images/esqueiros/esqueiro5.jpg"
-    ]
+    ],
+    "video": "/videos/esqueiro.mp4"
   },
   {
     "id": 2,
-    "name": "Cinzeiro gatinho",
-    "description": "Cinzeiro de gatinho.",
+    "name": "Sem Título",
+    "description": "Sem descrição.",
     "price": 15.0,
     "images": [
       "/images/cinzeiros/gatinhos/gatinhos1.jpg",
       "/images/cinzeiros/gatinhos/gatinhos2.jpg"
-    ]
+    ],
+    "video": "/videos/gatinhos.mp4"
   },
   {
     "id": 3,
@@ -33,7 +35,8 @@
       "/images/cinzeiros/lagoa/lago3.jpg",
       "/images/cinzeiros/lagoa/lago4.jpg",
       "/images/cinzeiros/lagoa/lago5.jpg"
-    ]
+    ],
+    "video": "/videos/lagoa.mp4"
   },
   {
     "id": 4,
@@ -73,8 +76,8 @@
   },
   {
     "id": 7,
-    "name": "Cinzeiro Esqueleto",
-    "description": "Peça confeccionada na cerâmica fria, modelada a mão. Pintura com tinta pva e acabamento em verniz fosco.",
+    "name": "Sem Título",
+    "description": "Sem descrição.",
     "price": 180.0,
     "images": [
       "/images/cinzeiros/esqueleto/esqueleto1.jpg",
@@ -97,7 +100,7 @@
   {
     "id": 9,
     "name": "Porta Incensos Ponyo",
-    "description": "Confecção na cerâmica fria e no biscuit, modelagem pintura e detalhes feitos a mão. Acabamento em resina para dar efeito de oceano",
+    "description": "Confecção na cerâmica fria e no biscuit, modelagem pintura e detalhes feitos a mão. Acabamento em resina para dar efeito de oceano.",
     "price": 150.0,
     "images": [
       "/images/cinzeiros/ponyo/ponyo1.jpg",
@@ -118,6 +121,42 @@
       "/images/cinzeiros/ponyo2/ponyo5.jpg",
       "/images/cinzeiros/ponyo2/ponyo6.jpg",
       "/images/cinzeiros/ponyo2/ponyo7.jpg"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Cinzeiro Folha de Lótus",
+    "description": "Sem descrição.",
+    "price": 150.0,
+    "images": [
+      "/images/cinzeiros/folha/folha1.jpg",
+      "/images/cinzeiros/folha/folha2.jpg",
+      "/images/cinzeiros/folha/folha3.jpg",
+      "/images/cinzeiros/folha/folha4.jpg",
+      "/images/cinzeiros/folha/folha5.jpg"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Cinzeiro e porta incensos Meu Amigo Totoro",
+    "description": "Confeccionado na cerâmica fria, modelagem, detalhes, pintura e acabamento feitos a mão. Revestido em verniz fosco.",
+    "price": 95.5,
+    "images": [
+      "/images/cinzeiros/totoro/totoro1.jpg",
+      "/images/cinzeiros/totoro/totoro2.jpg",
+      "/images/cinzeiros/totoro/totoro3.jpg",
+      "/images/cinzeiros/totoro/totoro4.jpg"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Cinzeiro Hora de Aventura",
+    "description": "Confeccionado na cerâmica fria, modelagem, detalhes, pintura e acabamento feitos a mão. Revestido em verniz fosco.",
+    "price": 95.5,
+    "images": [
+      "/images/cinzeiros/hda/hda1.jpg",
+      "/images/cinzeiros/hda/hda2.jpg",
+      "/images/cinzeiros/hda/hda3.jpg"
     ]
   }
 ]
