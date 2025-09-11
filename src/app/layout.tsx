@@ -39,8 +39,6 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    // 4. Remova o <head> manual. O Next.js cuida disso.
-    // 5. Junte TODAS as variáveis de fonte no className.
     <html lang="pt-BR" className={`${crimsonPro.variable} ${greatVibes.variable} ${fonteCursiva.variable} ${fonteSerifada.variable}`}>
       <body className="font-body antialiased"> {/* font-body será a padrão */}
         {children}

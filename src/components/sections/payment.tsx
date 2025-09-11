@@ -20,12 +20,12 @@ export function Payment() {
           <p className="text-lg text-foreground/80 mb-8">
             Após a confirmação do seu orçamento, o pagamento pode ser realizado de forma segura através do link abaixo.
           </p>
-          <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+          <Button asChild size="lg" className="text-base bg-accent hover:bg-accent/90 text-accent-foreground">
             <Link href={stripePaymentLink} target="_blank" rel="noopener noreferrer">
               Pagar com Stripe
             </Link>
           </Button>
-          <p className="text-sm text-muted-foreground mt-4">
+          <p className="text-base text-muted-foreground mt-4">
             Você será redirecionado para o ambiente seguro do Stripe.
           </p>
         </MotionDiv>

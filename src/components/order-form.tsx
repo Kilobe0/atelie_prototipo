@@ -138,7 +138,7 @@ export function OrderForm() {
                           {field.value ? (
                             format(field.value, "PPP", { locale: ptBR })
                           ) : (
-                            <span>Escolha uma data</span>
+                            <span className="text-base">Escolha uma data</span>
                           )}
                         </Button>
                       </FormControl>
