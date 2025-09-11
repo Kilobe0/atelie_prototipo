@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Porta-Esqueiro",
     "description": "Porta-Esqueiro artesanal personalizado.",
-    "price": 95.50,
+    "price": 95.5,
     "images": [
       "/images/esqueiros/esqueiro1.jpg",
       "/images/esqueiros/esqueiro2.jpg",
@@ -16,7 +16,7 @@
     "id": 2,
     "name": "Cinzeiro gatinho",
     "description": "Cinzeiro de gatinho.",
-    "price": 15.00,
+    "price": 15.0,
     "images": [
       "/images/cinzeiros/gatinhos/gatinhos1.jpg",
       "/images/cinzeiros/gatinhos/gatinhos2.jpg"
@@ -26,7 +26,7 @@
     "id": 3,
     "name": "Lagoa de Vitória Régias",
     "description": "Confeccionada na argila. Modelagem, pintura e acabamentos feitos a mão. Revestida em resina pra maior duração e efeito lindo de água de lagoa.",
-    "price": 180.00,
+    "price": 180.0,
     "images": [
       "/images/cinzeiros/lagoa/lago1.jpg",
       "/images/cinzeiros/lagoa/lago2.jpg",
@@ -39,18 +39,19 @@
     "id": 4,
     "name": "Colar Orquídeas",
     "description": "Peça delicada modelada no biscuit. Pintura feita a mão e acabamento em verniz fosco. Colar 70cm comprimento.",
-    "price": 70.00,
+    "price": 70.0,
     "images": [
       "/images/colar/colar1.jpg",
       "/images/colar/colar2.jpg",
-      "/images/colar/colar3.jpg"
-  ]
+      "/images/colar/colar3.jpg",
+      "/images/colar/colar4.jpg"
+    ]
   },
   {
     "id": 5,
     "name": "Cinzeiro Balloonerism Mac Miller",
     "description": "Peça confeccionada na cerâmica fria, modelada a mão. Pintura com tinta pva e acabamento em verniz fosco.",
-    "price": 250.00,
+    "price": 250.0,
     "images": [
       "/images/cinzeiros/mac/mac1.jpg",
       "/images/cinzeiros/mac/mac2.jpg",
@@ -62,12 +63,61 @@
     "id": 6,
     "name": "Cinzeiro e porta incensos Vitória Régia",
     "description": "Modelada a mão na cerâmica fria, pintura em tinta pva. Peça revestida em resina para dar melhor acabamento, proteção e efeito lindo de água caindo sob a planta.",
-    "price": 220.00,
+    "price": 220.0,
     "images": [
       "/images/cinzeiros/vitoria/vitoria1.jpg",
       "/images/cinzeiros/vitoria/vitoria2.jpg",
       "/images/cinzeiros/vitoria/vitoria3.jpg",
       "/images/cinzeiros/vitoria/vitoria4.jpg"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Cinzeiro Esqueleto",
+    "description": "Peça confeccionada na cerâmica fria, modelada a mão. Pintura com tinta pva e acabamento em verniz fosco.",
+    "price": 180.0,
+    "images": [
+      "/images/cinzeiros/esqueleto/esqueleto1.jpg",
+      "/images/cinzeiros/esqueleto/esqueleto2.jpg",
+      "/images/cinzeiros/esqueleto/esqueleto3.jpg",
+      "/images/cinzeiros/esqueleto/esqueleto4.jpg"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Sem Título",
+    "description": "Confeccionada na cerâmica fria, modelagem pintura e detalhes feitos a mão. Acabamento em verniz fosco.",
+    "price": 150.0,
+    "images": [
+      "/images/cinzeiros/coracao/coracao1.jpg",
+      "/images/cinzeiros/coracao/coracao2.jpg",
+      "/images/cinzeiros/coracao/coracao3.jpg"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Porta Incensos Ponyo",
+    "description": "Confecção na cerâmica fria e no biscuit, modelagem pintura e detalhes feitos a mão. Acabamento em resina para dar efeito de oceano",
+    "price": 150.0,
+    "images": [
+      "/images/cinzeiros/ponyo/ponyo1.jpg",
+      "/images/cinzeiros/ponyo/ponyo2.jpg",
+      "/images/cinzeiros/ponyo/ponyo3.jpg"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Porta Incensos Ponyo",
+    "description": "Confecção na cerâmica fria e no biscuit, modelagem pintura e detalhes feitos a mão. Acabamento em resina para dar efeito de oceano.",
+    "price": 120.0,
+    "images": [
+      "/images/cinzeiros/ponyo2/ponyo1.jpg",
+      "/images/cinzeiros/ponyo2/ponyo2.jpg",
+      "/images/cinzeiros/ponyo2/ponyo3.jpg",
+      "/images/cinzeiros/ponyo2/ponyo4.jpg",
+      "/images/cinzeiros/ponyo2/ponyo5.jpg",
+      "/images/cinzeiros/ponyo2/ponyo6.jpg",
+      "/images/cinzeiros/ponyo2/ponyo7.jpg"
     ]
   }
 ]
