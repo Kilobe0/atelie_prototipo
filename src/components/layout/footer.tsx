@@ -8,8 +8,8 @@ export function Footer() {
         <p className="text-sm">
           &copy; {currentYear} Chlorine Ateliê. Todos os direitos reservados.
         </p>
-        <p className="text-xs mt-2">
-          Feito com ♡
+        <p className="text-sm mt-2">
+          Desenvolvido com ❤️ por <a href="https://github.com/Kilobe0" className="text-accent hover:underline">Matheus Achim</a>
         </p>
       </div>
     </footer>
