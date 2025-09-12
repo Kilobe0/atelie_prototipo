@@ -11,7 +11,7 @@
       "/images/esqueiros/esqueiro4.jpg",
       "/images/esqueiros/esqueiro5.jpg"
     ],
-    "video": "/videos/esqueiro.mp4"
+    "videoUrl": "/videos/esqueiro.mp4"
   },
   {
     "id": 2,
@@ -22,7 +22,7 @@
       "/images/cinzeiros/gatinhos/gatinhos1.jpg",
       "/images/cinzeiros/gatinhos/gatinhos2.jpg"
     ],
-    "video": "/videos/gatinhos.mp4"
+    "videoUrl": "/videos/gatinhos.mp4"
   },
   {
     "id": 3,
@@ -36,7 +36,7 @@
       "/images/cinzeiros/lagoa/lago4.jpg",
       "/images/cinzeiros/lagoa/lago5.jpg"
     ],
-    "video": "/videos/lagoa.mp4"
+    "videoUrl": "/videos/lagoa.mp4"
   },
   {
     "id": 4,

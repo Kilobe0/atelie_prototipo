@@ -2,10 +2,10 @@
 
 "use client"; // Carrosséis são interativos, então precisam ser Client Components
 
-import React, { useState, useEffect, useCallback } from 'react';
-import Image from 'next/image';
-import useEmblaCarousel from 'embla-carousel-react';
-import { ChevronLeft, ChevronRight } from 'lucide-react'; // Ícones para os botões
+import React, { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
+import useEmblaCarousel from "embla-carousel-react";
+import { ChevronLeft, ChevronRight } from "lucide-react"; // Ícones para os botões
 
 interface ProductCarouselProps {
   images: string[];
@@ -18,9 +18,18 @@ export function ProductCarousel({ images, alt }: ProductCarouselProps) {
   const [nextBtnDisabled, setNextBtnDisabled] = useState(true);
   const [selectedIndex, setSelectedIndex] = useState(0);
 
-  const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi]);
-  const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
-  const scrollTo = useCallback((index: number) => emblaApi && emblaApi.scrollTo(index), [emblaApi]);
+  const scrollPrev = useCallback(
+    () => emblaApi && emblaApi.scrollPrev(),
+    [emblaApi]
+  );
+  const scrollNext = useCallback(
+    () => emblaApi && emblaApi.scrollNext(),
+    [emblaApi]
+  );
+  const scrollTo = useCallback(
+    (index: number) => emblaApi && emblaApi.scrollTo(index),
+    [emblaApi]
+  );
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
@@ -32,8 +41,8 @@ export function ProductCarousel({ images, alt }: ProductCarouselProps) {
   useEffect(() => {
     if (!emblaApi) return;
     onSelect();
-    emblaApi.on('select', onSelect);
-    emblaApi.on('reInit', onSelect);
+    emblaApi.on("select", onSelect);
+    emblaApi.on("reInit", onSelect);
   }, [emblaApi, onSelect]);
 
   return (
@@ -55,28 +64,37 @@ export function ProductCarousel({ images, alt }: ProductCarouselProps) {
 
       {/* Botões de Navegação */}
       <button
-        className="absolute top-1/2 left-2 -translate-y-1/2 bg-black/30 text-white p-2 rounded-full hover:bg-black/50 transition-all disabled:opacity-0"
-        onClick={scrollPrev}
+        className="absolute top-1/2 left-2 -translate-y-1/2 bg-black/30 text-white p-2 rounded-full hover:bg-black/50 transition-all disabled:opacity-0 z-10"
+        onClick={(e) => {
+          e.stopPropagation(); // Impede o clique de "vazar" para o card
+          scrollPrev();
+        }}
         disabled={prevBtnDisabled}
       >
         <ChevronLeft size={24} />
       </button>
       <button
-        className="absolute top-1/2 right-2 -translate-y-1/2 bg-black/30 text-white p-2 rounded-full hover:bg-black/50 transition-all disabled:opacity-0"
-        onClick={scrollNext}
+        className="absolute top-1/2 right-2 -translate-y-1/2 bg-black/30 text-white p-2 rounded-full hover:bg-black/50 transition-all disabled:opacity-0 z-10"
+        onClick={(e) => {
+          e.stopPropagation(); // Impede o clique de "vazar" para o card
+          scrollNext();
+        }}
         disabled={nextBtnDisabled}
       >
         <ChevronRight size={24} />
       </button>
-      
+
       {/* Indicadores de Bolinha */}
       <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2">
         {images.map((_, index) => (
           <button
             key={index}
-            onClick={() => scrollTo(index)}
+            onClick={(e) => {
+              e.stopPropagation(); // Impede o clique de "vazar" para o card
+              scrollTo(index);
+            }}
             className={`w-2 h-2 rounded-full transition-all ${
-              index === selectedIndex ? 'bg-white scale-125' : 'bg-white/50'
+              index === selectedIndex ? "bg-white scale-125" : "bg-white/50"
             }`}
           />
         ))}
