@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export function Hero() {
   return (
-    <section className="text-center py-20 md:py-32 px-4">
+    <section className="text-center h-[calc(100vh-6rem)] px-4 flex flex-col justify-center items-center">
       <div className="container mx-auto max-w-4xl">
         <MotionDiv
           initial={{ opacity: 0, y: 20 }}
