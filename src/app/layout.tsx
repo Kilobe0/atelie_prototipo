@@ -39,7 +39,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="pt-BR" className={`${crimsonPro.variable} ${greatVibes.variable} ${fonteCursiva.variable} ${fonteSerifada.variable}`}>
+    <html lang="pt-BR" className={`${crimsonPro.variable} ${greatVibes.variable} ${fonteCursiva.variable} ${fonteSerifada.variable}`} suppressHydrationWarning>
       <body className="font-body antialiased"> {/* font-body será a padrão */}
         {children}
         <Toaster />
