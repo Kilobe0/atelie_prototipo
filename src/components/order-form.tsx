@@ -56,7 +56,7 @@ function SubmitButton() {
     <Button
       type="submit"
       disabled={pending}
-      className="w-fit bg-primary hover:bg-primary/90 text-primary-foreground text-lg py-6"
+      className="w-fit bg-primary hover:bg-primary hover:brightness-125 transition-colors text-primary-foreground text-lg py-6"
     >
       {pending ? "Enviando..." : "Solicitar Orçamento"}
     </Button>
@@ -106,7 +106,7 @@ export function OrderForm() {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Seu Nome</FormLabel>
+                  <FormLabel>Nome</FormLabel>
                   <FormControl>
                     <Input placeholder="Seu nome completo" {...field} />
                   </FormControl>
@@ -119,7 +119,7 @@ export function OrderForm() {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Seu E-mail</FormLabel>
+                  <FormLabel>E-mail</FormLabel>
                   <FormControl>
                     <Input placeholder="seu.email@exemplo.com" {...field} />
                   </FormControl>
@@ -132,7 +132,7 @@ export function OrderForm() {
               name="desiredDate"
               render={({ field }) => (
                 <FormItem className="flex flex-col">
-                  <FormLabel>Data Desejada para Entrega</FormLabel>
+                  <FormLabel>Data de Entrega</FormLabel>
                   <Popover>
                     <PopoverTrigger asChild>
                       <FormControl>
