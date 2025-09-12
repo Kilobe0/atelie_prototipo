@@ -33,8 +33,8 @@ export function Header() {
   return (
     <header
       className={cn(
-        "px-4 md:px-8 w-full bg-background/80 backdrop-blur-sm z-20 sticky top-0 transition-all duration-300",
-        scrolled ? "py-4 border-b border-border/40" : "py-6"
+        "px-6 md:px-8 w-full bg-background/80 backdrop-blur-sm z-20 sticky top-0 transition-all duration-300",
+        scrolled ? "py-2 border-b border-border/40" : "py-6"
       )}
     >
       <div className="container mx-auto flex justify-between items-center">
@@ -59,7 +59,7 @@ export function Header() {
               scrolled ? "opacity-100" : "opacity-0 pointer-events-none"
             )}
           >
-            <Home className="h-8 w-8 text-foreground hover:text-accent" />
+            <Home className="h-7 w-7 md:h-8 md:w-8 text-foreground transition-colors hover:text-accent" />
           </Link>
         </div>
 

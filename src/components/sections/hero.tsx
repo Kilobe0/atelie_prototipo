@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
 import { MotionDiv } from "@/components/motion-div";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export function Hero() {
@@ -30,7 +30,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mt-10"
         >
-          <Button asChild size="lg" className="bg-primary hover:bg-primary hover:brightness-125 transition-colors text-primary-foreground text-xl">
+          <Button asChild size="lg" className="text-xl">
             <Link href="#encomenda">
               Quero uma peça exclusiva
             </Link>
