@@ -44,7 +44,7 @@ export function Header() {
           <Link
             href="/"
             className={cn(
-              "text-5xl font-cursive text-foreground hover:text-accent transition-opacity duration-300",
+              "relative top-3 text-5xl font-cursive text-foreground hover:text-accent transition-opacity duration-300",
               scrolled ? "opacity-0" : "opacity-100"
             )}
           >
