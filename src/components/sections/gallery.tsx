@@ -114,8 +114,14 @@ export function Gallery() {
         <DialogContent
           className="
           bg-card border-accent/20 
-          w-screen h-[100dvh] max-w-none rounded-none
-          sm:max-w-5xl sm:h-auto sm:max-h-[90vh] sm:rounded-lg
+          
+          /* --- Novos Estilos para MOBILE (padrão) --- */
+          w-[80vw] max-w-md h-auto max-h-[85vh] rounded-lg
+
+          /* --- Estilos para DESKTOP (sm:) que já estavam corretos --- */
+          sm:max-w-5xl sm:max-h-[90vh]
+
+          /* --- Estilos de Layout Interno --- */
           p-0 flex flex-col
         "
         >
@@ -150,8 +156,8 @@ export function Gallery() {
                 </div>
 
                 {/* Coluna das Informações*/}
-                <div className="flex flex-col min-h-0 flex-grow p-1 md:p-8">
-                  <h2 className="text-4xl md:text-4xl font-headline text-accent mb-2 flex-shrink-0">
+                <div className="flex flex-col min-h-0 flex-grow p-2 md:p-8">
+                  <h2 className="text-3xl md:text-4xl font-headline text-accent mb-2 flex-shrink-0">
                     {selectedProduct.name}
                   </h2>
 
