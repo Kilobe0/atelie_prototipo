@@ -9,10 +9,25 @@ import { ProductCarousel } from "@/components/ui/product-carousel";
 import products from "@/data/products.json";
 
 // 1. Importe os componentes necessários para o título acessível
-import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
 
-type Product = typeof products[0] & { videoUrl?: string };
+type Product = (typeof products)[0] & { videoUrl?: string };
 
 export function Gallery() {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
@@ -31,10 +46,10 @@ export function Gallery() {
   const handleCloseProduct = () => {
     setSelectedProduct(null);
   };
-  
+
   // Função para permitir "clicar" com o teclado (Enter/Espaço)
   const handleKeyDown = (e: React.KeyboardEvent, product: Product) => {
-    if (e.key === 'Enter' || e.key === ' ') {
+    if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();
       handleOpenProduct(product);
     }
@@ -66,11 +81,18 @@ export function Gallery() {
                 >
                   <Card className="flex flex-col h-full overflow-hidden border-accent/20 bg-muted/20 group transition-all duration-300 hover:shadow-2xl hover:shadow-accent/10 hover:border-accent/50">
                     <CardContent className="p-0 flex flex-col flex-grow">
-                      <ProductCarousel images={product.images} alt={product.name} />
+                      <ProductCarousel
+                        images={product.images}
+                        alt={product.name}
+                      />
                       <div className="p-4 flex flex-col justify-between flex-grow">
                         <div>
-                          <h3 className="text-3xl font-headline text-accent font-bold">{product.name}</h3>
-                          <p className="text-foreground/80 mt-1">{product.description}</p>
+                          <h3 className="text-3xl font-headline text-accent font-bold">
+                            {product.name}
+                          </h3>
+                          <p className="text-foreground/80 mt-1">
+                            {product.description}
+                          </p>
                         </div>
                         <p className="text-lg font-semibold text-foreground self-end mt-4">
                           R$ {product.price.toFixed(2).replace(".", ",")}
@@ -85,21 +107,30 @@ export function Gallery() {
         </div>
       </section>
 
-      <Dialog open={!!selectedProduct} onOpenChange={(isOpen) => !isOpen && handleCloseProduct()}>
-        {/* MELHORIA 3: Aumentamos a largura máxima do modal no desktop */}
-        <DialogContent className="
-          bg border-accent/20 
-          w-screen h-screen max-w-none rounded-none 
+      <Dialog
+        open={!!selectedProduct}
+        onOpenChange={(isOpen) => !isOpen && handleCloseProduct()}
+      >
+        <DialogContent
+          className="
+          bg-card border-accent/20 
+          w-screen h-[100dvh] max-w-none rounded-none
           sm:max-w-6xl sm:h-auto sm:max-h-[90vh] sm:rounded-lg
-          overflow-y-auto
-        ">
+          p-0 flex flex-col
+        "
+        >
           {selectedProduct && (
             <>
-              <DialogTitle asChild><VisuallyHidden>{selectedProduct.name}</VisuallyHidden></DialogTitle>
-              <DialogDescription asChild><VisuallyHidden>{selectedProduct.description}</VisuallyHidden></DialogDescription>
+              <DialogTitle asChild>
+                <VisuallyHidden>{selectedProduct.name}</VisuallyHidden>
+              </DialogTitle>
+              <DialogDescription asChild>
+                <VisuallyHidden>{selectedProduct.description}</VisuallyHidden>
+              </DialogDescription>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
-                <div className="w-full aspect-square">
+              <div className="flex flex-col md:grid md:grid-cols-2 md:gap-6 w-full h-full p-4 md:p-6">
+                {/* Coluna da Mídia */}
+                <div className="w-full aspect-square flex-shrink-0">
                   {selectedProduct.videoUrl ? (
                     <video
                       ref={videoRef}
@@ -111,20 +142,56 @@ export function Gallery() {
                       muted
                     />
                   ) : (
-                    <ProductCarousel images={selectedProduct.images} alt={selectedProduct.name} />
+                    <ProductCarousel
+                      images={selectedProduct.images}
+                      alt={selectedProduct.name}
+                    />
                   )}
                 </div>
-                <div className="flex flex-col">
-                  <h2 className="text-4xl font-headline text-accent mb-4">{selectedProduct.name}</h2>
-                  <p className="text-muted-foreground flex-grow">{selectedProduct.description}</p>
-                  <p className="text-2xl font-bold text-foreground self-end mt-8">
+
+                {/* Coluna das Informações*/}
+                <div className="flex flex-col min-h-0 pt-4 md:pt-0">
+                  <h2 className="text-3xl md:text-4xl font-headline text-accent mb-2 flex-shrink-0">
+                    {selectedProduct.name}
+                  </h2>
+
+                  {/* 2. No DESKTOP, mostramos a descrição normalmente */}
+                  <p className="text-muted-foreground flex-grow overflow-y-auto hidden md:block">
+                    {selectedProduct.description}
+                  </p>
+
+                  {/* 3. No MOBILE, mostramos um Drawer clicável */}
+                  <div className="md:hidden flex-grow flex items-center">
+                    <Drawer>
+                      <DrawerTrigger asChild>
+                        <button className="text-left text-muted-foreground underline underline-offset-4">
+                          Ver descrição completa da peça
+                        </button>
+                      </DrawerTrigger>
+                      <DrawerContent>
+                        <div className="mx-auto w-full max-w-sm">
+                          <DrawerHeader>
+                            <DrawerTitle className="font-headline text-accent">
+                              {selectedProduct.name}
+                            </DrawerTitle>
+                          </DrawerHeader>
+                          <div className="p-4 pb-0">
+                            <p className="text-foreground">
+                              {selectedProduct.description}
+                            </p>
+                          </div>
+                        </div>
+                      </DrawerContent>
+                    </Drawer>
+                  </div>
+
+                  <p className="text-2xl font-bold text-foreground self-end mt-4 flex-shrink-0">
                     R$ {selectedProduct.price.toFixed(2).replace(".", ",")}
                   </p>
                 </div>
               </div>
             </>
           )}
-          {/* MELHORIA 2: Nenhum botão 'X' foi adicionado, confiando no padrão do ShadCN */}
         </DialogContent>
       </Dialog>
     </>
