@@ -128,14 +128,14 @@ export function Gallery() {
                 <VisuallyHidden>{selectedProduct.description}</VisuallyHidden>
               </DialogDescription>
 
-              <div className="flex flex-col md:grid md:grid-cols-2 md:gap-6 w-full h-full">
+              <div className="flex flex-col md:grid md:grid-cols-2 w-full h-full">
                 {/* Coluna da Mídia */}
                 <div className="w-full aspect-square flex-shrink-0">
                   {selectedProduct.videoUrl ? (
                     <video
                       ref={videoRef}
                       src={selectedProduct.videoUrl}
-                      className="w-full h-full object-contain rounded-md"
+                      className="w-full h-full object-cover rounded-md"
                       controls
                       autoPlay
                       playsInline
@@ -150,7 +150,7 @@ export function Gallery() {
                 </div>
 
                 {/* Coluna das Informações*/}
-                <div className="flex flex-col min-h-0 p-1 flex-grow">
+                <div className="flex flex-col min-h-0 flex-grow p-1 md:p-8">
                   <h2 className="text-4xl md:text-4xl font-headline text-accent mb-2 flex-shrink-0">
                     {selectedProduct.name}
                   </h2>
