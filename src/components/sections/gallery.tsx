@@ -115,7 +115,7 @@ export function Gallery() {
           className="
           bg-card border-accent/20 
           w-screen h-[100dvh] max-w-none rounded-none
-          sm:max-w-6xl sm:h-auto sm:max-h-[90vh] sm:rounded-lg
+          sm:max-w-5xl sm:h-auto sm:max-h-[90vh] sm:rounded-lg
           p-0 flex flex-col
         "
         >
@@ -151,12 +151,12 @@ export function Gallery() {
 
                 {/* Coluna das Informações*/}
                 <div className="flex flex-col min-h-0 pt-4 md:pt-0">
-                  <h2 className="text-3xl md:text-4xl font-headline text-accent mb-2 flex-shrink-0">
+                  <h2 className="text-4xl md:text-4xl font-headline text-accent mb-2 flex-shrink-0">
                     {selectedProduct.name}
                   </h2>
 
                   {/* 2. No DESKTOP, mostramos a descrição normalmente */}
-                  <p className="text-muted-foreground flex-grow overflow-y-auto hidden md:block">
+                  <p className="text-2xl text-muted-foreground flex-grow overflow-y-auto hidden md:block">
                     {selectedProduct.description}
                   </p>
 
