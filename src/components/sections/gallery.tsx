@@ -128,7 +128,7 @@ export function Gallery() {
                 <VisuallyHidden>{selectedProduct.description}</VisuallyHidden>
               </DialogDescription>
 
-              <div className="flex flex-col md:grid md:grid-cols-2 md:gap-6 w-full h-full p-4 md:p-6">
+              <div className="flex flex-col md:grid md:grid-cols-2 md:gap-6 w-full h-full">
                 {/* Coluna da Mídia */}
                 <div className="w-full aspect-square flex-shrink-0">
                   {selectedProduct.videoUrl ? (
@@ -150,7 +150,7 @@ export function Gallery() {
                 </div>
 
                 {/* Coluna das Informações*/}
-                <div className="flex flex-col min-h-0 pt-4 md:pt-0">
+                <div className="flex flex-col min-h-0 p-1 flex-grow">
                   <h2 className="text-4xl md:text-4xl font-headline text-accent mb-2 flex-shrink-0">
                     {selectedProduct.name}
                   </h2>
