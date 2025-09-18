@@ -157,7 +157,7 @@ export function Gallery() {
 
                 {/* Coluna das Informações*/}
                 <div className="flex flex-col min-h-0 flex-grow p-2 md:p-8">
-                  <h2 className="text-3xl md:text-4xl font-headline text-accent mb-2 flex-shrink-0">
+                  <h2 className="font-bold text-2xl md:text-4xl font-headline text-accent mb-2 flex-shrink-0 brightness-125">
                     {selectedProduct.name}
                   </h2>
 
