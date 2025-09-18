@@ -122,7 +122,7 @@ export function Gallery() {
           sm:max-w-5xl sm:max-h-[90vh]
 
           /* --- Estilos de Layout Interno --- */
-          p-0 flex flex-col
+          p-0 flex flex-col overflow-hidden
         "
         >
           {selectedProduct && (
