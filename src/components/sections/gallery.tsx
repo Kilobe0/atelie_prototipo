@@ -231,11 +231,11 @@ export function Gallery() {
                       <DrawerContent>
                         <div className="mx-auto w-full max-w-sm">
                           <DrawerHeader>
-                            <DrawerTitle className="font-headline text-accent">
+                            <DrawerTitle className="font-headline text-accent text-3xl brightness-125">
                               {selectedProduct.name}
                             </DrawerTitle>
                           </DrawerHeader>
-                          <div className="p-4 pb-0">
+                          <div className="p-5">
                             <p className="text-foreground">
                               {selectedProduct.description}
                             </p>
