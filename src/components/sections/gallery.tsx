@@ -27,27 +27,68 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 
+import { PlayCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
 type Product = (typeof products)[0] & { videoUrl?: string };
 
 export function Gallery() {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [isShowingVideo, setIsShowingVideo] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    if (!selectedProduct && videoRef.current) {
-      videoRef.current.pause();
-    }
-  }, [selectedProduct]);
 
   const handleOpenProduct = (product: Product) => {
     setSelectedProduct(product);
+    setIsShowingVideo(false); // Sempre começa mostrando as imagens
   };
 
   const handleCloseProduct = () => {
+    // 2. Garantimos que, ao fechar o modal, saímos do modo de tela cheia se ele estiver ativo.
+    if (document.fullscreenElement) {
+      document.exitFullscreen();
+    }
     setSelectedProduct(null);
   };
 
-  // Função para permitir "clicar" com o teclado (Enter/Espaço)
+  // 2. A MÁGICA: Este useEffect orquestra a tela cheia
+  useEffect(() => {
+    const videoElement = videoRef.current;
+    if (isShowingVideo && videoElement) {
+      const requestFullscreen = () => {
+        if (videoElement.requestFullscreen) {
+          videoElement.requestFullscreen();
+        } else if ((videoElement as any).webkitRequestFullscreen) {
+          // Safari
+          (videoElement as any).webkitRequestFullscreen();
+        }
+      };
+
+      // Damos um pequeno tempo para o navegador renderizar o vídeo antes de pedir tela cheia
+      const timer = setTimeout(() => {
+        requestFullscreen();
+        videoElement.play();
+      }, 100); // 100ms é um delay seguro
+
+      // Função para detectar quando o usuário sai da tela cheia (ex: apertando ESC)
+      const handleFullscreenChange = () => {
+        if (!document.fullscreenElement) {
+          setIsShowingVideo(false); // Volta para o carrossel
+        }
+      };
+
+      document.addEventListener("fullscreenchange", handleFullscreenChange);
+
+      // Limpeza: remove o timer e o listener
+      return () => {
+        clearTimeout(timer);
+        document.removeEventListener(
+          "fullscreenchange",
+          handleFullscreenChange
+        );
+      };
+    }
+  }, [isShowingVideo]); // Este efeito dispara toda vez que 'isShowingVideo' muda
+
   const handleKeyDown = (e: React.KeyboardEvent, product: Product) => {
     if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();
@@ -116,7 +157,7 @@ export function Gallery() {
           bg-card border-accent/20 
           
           /* --- Novos Estilos para MOBILE (padrão) --- */
-          w-[80vw] max-w-md h-auto max-h-[85vh] rounded-lg
+          w-[85vw] max-w-md h-auto max-h-[85vh] rounded-lg
 
           /* --- Estilos para DESKTOP (sm:) que já estavam corretos --- */
           sm:max-w-5xl sm:max-h-[90vh]
@@ -137,21 +178,34 @@ export function Gallery() {
               <div className="flex flex-col md:grid md:grid-cols-2 w-full h-full">
                 {/* Coluna da Mídia */}
                 <div className="w-full aspect-square flex-shrink-0">
-                  {selectedProduct.videoUrl ? (
+                  {/* 3. A renderização condicional volta */}
+                  {isShowingVideo && selectedProduct.videoUrl ? (
                     <video
                       ref={videoRef}
                       src={selectedProduct.videoUrl}
-                      className="w-full h-full object-cover rounded-md"
+                      className="w-full h-full object-contain"
                       controls
-                      autoPlay
-                      playsInline
                       muted
+                      playsInline
                     />
                   ) : (
-                    <ProductCarousel
-                      images={selectedProduct.images}
-                      alt={selectedProduct.name}
-                    />
+                    <>
+                      <ProductCarousel
+                        images={selectedProduct.images}
+                        alt={selectedProduct.name}
+                      />
+                      {selectedProduct.videoUrl && (
+                        <Button
+                          variant="ghost"
+                          size="icon"
+                          className="absolute left-2 top-2 z-20 bg-black/30 text-white hover:bg-black/50 hover:text-white"
+                          onClick={() => setIsShowingVideo(true)} // Apenas muda o estado
+                          aria-label="Reproduzir vídeo do produto"
+                        >
+                          <PlayCircle className="h-8 w-8" />
+                        </Button>
+                      )}
+                    </>
                   )}
                 </div>
 
@@ -171,7 +225,7 @@ export function Gallery() {
                     <Drawer>
                       <DrawerTrigger asChild>
                         <button className="text-left text-muted-foreground underline underline-offset-4">
-                          Ver descrição completa da peça
+                          Ver descrição
                         </button>
                       </DrawerTrigger>
                       <DrawerContent>
@@ -190,8 +244,7 @@ export function Gallery() {
                       </DrawerContent>
                     </Drawer>
                   </div>
-
-                  <p className="text-2xl font-bold text-foreground self-end mt-4 flex-shrink-0">
+                  <p className="text-1xl md:text-2xl font-bold text-foreground self-end mt-4 flex-shrink-0">
                     R$ {selectedProduct.price.toFixed(2).replace(".", ",")}
                   </p>
                 </div>
