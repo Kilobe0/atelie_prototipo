@@ -55,8 +55,9 @@ function SubmitButton() {
   return (
     <Button
       type="submit"
+      variant="accent"
       disabled={pending}
-      className="w-fit bg-primary hover:bg-primary hover:brightness-125 transition-colors text-primary-foreground text-lg py-6"
+      className="w-fit transition-colors text-primary-foreground text-lg py-6"
     >
       {pending ? "Enviando..." : "Solicitar Orçamento"}
     </Button>
