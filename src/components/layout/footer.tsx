@@ -9,7 +9,7 @@ export function Footer() {
           &copy; {currentYear} Chlorine Ateliê. Todos os direitos reservados.
         </p>
         <p className="text-base mt-2">
-          Desenvolvido com ❤️ por <a href="https://github.com/Kilobe0" className="text-ring hover:underline">Matheus Achim</a>
+          Desenvolvido com ❤️ por <a href="https://github.com/Kilobe0" className="text-ring hover:underline brightness-125">Matheus Achim</a>
         </p>
       </div>
     </footer>
